@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Sets up the batch-cutout environment inside the skill folder. Safe to re-run.
+# Sets up the batch-person-cutout environment inside the skill folder. Safe to re-run.
 #   scripts/setup.sh               default install
 #   scripts/setup.sh --with-torch  also install torch/torchvision on macOS (torchvision backend)
 set -euo pipefail

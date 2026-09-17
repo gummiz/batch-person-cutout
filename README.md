@@ -1,4 +1,4 @@
-# batch-cutout
+# batch-person-cutout
 
 A Claude skill that cuts people out of a folder of photos and sorts the results by person.
 Everything runs locally, so no photo leaves the machine.
@@ -23,11 +23,11 @@ up the install; without it the script falls back to `venv` and `pip`.
 Claude Code loads personal skills from `~/.claude/skills/`. Clone the repo there and run the setup:
 
 ```bash
-git clone https://github.com/gummiz/batch-cutout.git ~/.claude/skills/batch-cutout
-bash ~/.claude/skills/batch-cutout/scripts/setup.sh
+git clone https://github.com/gummiz/batch-person-cutout.git ~/.claude/skills/batch-person-cutout
+bash ~/.claude/skills/batch-person-cutout/scripts/setup.sh
 ```
 
-To make the skill available in one project only, clone it into `<project>/.claude/skills/batch-cutout`
+To make the skill available in one project only, clone it into `<project>/.claude/skills/batch-person-cutout`
 instead.
 
 The setup creates `.venv/` inside the skill folder, compiles the Vision helper on macOS and downloads
@@ -41,14 +41,14 @@ person". The scripts also work without Claude; `SKILL.md` lists the commands.
 ### Update
 
 ```bash
-git -C ~/.claude/skills/batch-cutout pull
-bash ~/.claude/skills/batch-cutout/scripts/setup.sh
+git -C ~/.claude/skills/batch-person-cutout pull
+bash ~/.claude/skills/batch-person-cutout/scripts/setup.sh
 ```
 
 ### Uninstall
 
 ```bash
-rm -rf ~/.claude/skills/batch-cutout ~/.rembg/models/birefnet-general
+rm -rf ~/.claude/skills/batch-person-cutout ~/.rembg/models/birefnet-general
 ```
 
 torchvision weights, if you installed them, sit in `~/.cache/torch`.
@@ -67,4 +67,4 @@ The skill code is MIT. The models and libraries it downloads keep their own lice
 Ultralytics and insightface are left out on purpose. Their licenses (AGPL-3.0, and non-commercial
 model weights) don't suit a skill that is meant to be shared.
 
-Object cutouts (products, props) are planned but not implemented.
+This skill handles people only. Object cutouts (products, props) are planned as a separate project.
