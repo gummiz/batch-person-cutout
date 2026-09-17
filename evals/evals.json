@@ -1,0 +1,23 @@
+{
+  "skill_name": "batch-cutout",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I've got about 100 event photos in ./shoot/raw. Cut out all the people as transparent PNGs and sort them into one folder per person. Nothing may go to a cloud service.",
+      "expected_output": "Runs setup if needed, cuts out in auto mode into a new versioned folder, reports QA counts from report.csv, clusters faces, asks the user to name clusters via clusters.html, shows the apply_names dry run and applies after approval. No image is viewed or uploaded.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Stell mir bitte die Fotos in 01-Material/Fotos frei, nur die großen Personen im Vordergrund. Die Namen kenne ich: DSC0101 anna links, DSC0101 ben rechts, DSC0102 anna Mitte.",
+      "expected_output": "Writes a selection file with the user's lines (DSC0101 anna L, DSC0101 ben R, DSC0102 anna C), runs cutout.py with --select, reports results and the output folder with anna/ and ben/ subfolders.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "The last cutout run left weird dark notches at the bottom where the table is. Can you redo DSC0457 and DSC0460 with something that fixes that?",
+      "expected_output": "Reruns only those photos with --only into a new version, proposes --close and/or birefnet-portrait, asks before using --fade-bottom, does not overwrite the previous run and compares report.csv results without looking at the images.",
+      "files": []
+    }
+  ]
+}
