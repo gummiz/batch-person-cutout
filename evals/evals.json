@@ -1,5 +1,5 @@
 {
-  "skill_name": "batch-cutout",
+  "skill_name": "batch-person-cutout",
   "evals": [
     {
       "id": 1,

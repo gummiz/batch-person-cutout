@@ -1,9 +1,9 @@
 ---
-name: batch-cutout
+name: batch-person-cutout
 description: Batch background removal for photos of people, done entirely on the local machine. Cuts every person out of a folder of photos into transparent RGBA PNGs, runs automatic QA, groups the cutouts by face and sorts them into one folder per person. Use this whenever the user wants cutouts, background removal, "Freisteller", "freistellen", isolated or masked people, transparent PNGs of people, or wants to sort event/shoot photos by person, even if they only say "cut out the people in this folder" or "remove the backgrounds from these shots". Prefer it over cloud tools whenever privacy matters or many photos are involved.
 ---
 
-# batch-cutout
+# batch-person-cutout
 
 Cuts people out of a photo folder into transparent PNGs, locally, and sorts them by person.
 Everything lives in this skill folder; `SKILL_DIR` below means the folder containing this file.
@@ -96,8 +96,8 @@ Ask the user before using `--fade-bottom`; some want hard edges and fix them by 
 
 ## Object mode
 
-Planned, not implemented. Cutting out products or props (Subject Lifting, or GroundingDINO/OWL-ViT +
-SAM, sorted by category) would be a separate backend. Say so if asked, and don't improvise it.
+Not part of this skill. It handles people only; cutting out products or props is planned as a
+separate project. Say so if asked, and don't improvise it.
 
 ## References
 
