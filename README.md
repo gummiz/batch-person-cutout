@@ -1,5 +1,7 @@
 # batch-person-cutout
 
+![A photo with a cut line around the person, scissors, and the finished cutout next to the hole it left](assets/2026-09-17-batch-person-cutout-card.jpg)
+
 A Claude skill that cuts people out of a folder of photos and sorts the results by person.
 Everything runs locally, so no photo leaves the machine.
 
